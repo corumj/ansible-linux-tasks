@@ -1,6 +1,5 @@
 - name: Deploy demo Node JS backend
-  hosts: all 
-  gather_facts: no 
+  hosts: all  
   vars:
     git_repo_url: https://github.com/corumj/node-js-postgresql-crud-example
     repo_path: /home/ec2-user/demoapp 
@@ -21,7 +20,7 @@
     - name: debug this variable 
       debug:
         var: hostvars[groups['tag_app_database']]
-        
+
     - name: update db.config.js with db connection info 
       lineinfile:
         path: "{{ repo_path }}/app/config/db.config.js"
