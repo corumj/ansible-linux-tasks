@@ -33,7 +33,6 @@
         regexp: '  USER: "postgres",'
         line: "  USER: {{ ansible_password }},"
 
-
     - name: copy demoapp.service to server
       become: yes
       copy:
