@@ -1,10 +1,11 @@
 ---
 - name: Install nodeJS 
   hosts: all
+  become: yes
   vars:
     nodejs_npm_global_packages:
       - jslint 
     nodejs_install_npm_user: ec2-user
-    
+
   roles:
     - geerlingguy.nodejs 
