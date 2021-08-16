@@ -19,11 +19,13 @@
         state: present
 
     - name: copy demoapp.service to server
+      become: yes
       copy:
         src: files/demoapp.service
         dest: /etc/systemd/system/demoapp.service
 
     - name: enable and start demoapp service
+      become: yes
       systemd:
         name: demoapp
         daemon_reload: yes 
