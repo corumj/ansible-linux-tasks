@@ -4,7 +4,7 @@
   vars:
     git_repo_url: https://github.com/corumj/node-js-postgresql-crud-example
     repo_path: /home/ec2-user/demoapp 
-    repo_branch: main
+    repo_branch: master
 
   tasks:
     - name: Clone the app repository 
