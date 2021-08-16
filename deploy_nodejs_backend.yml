@@ -22,13 +22,13 @@
       lineinfile:
         path: "{{ repo_path }}/app/config/db.config.js"
         regexp: '  HOST: "localhost",'
-        line: '  HOST: "{{ hostvars[groups['tag_app_database'][1]]['private_ip_address'] }}",'
+        line: "  HOST: {{ hostvars[groups['tag_app_database'][1]]['private_ip_address'] }},"
 
     - name: update db.config.js with db n info 
       lineinfile:
         path: "{{ repo_path }}/app/config/db.config.js"
         regexp: '  HOST: "localhost",'
-        line: '  HOST: "{{ hostvars[groups['tag_app_database'][1]]['private_ip_address'] }}",'
+        line: "  HOST: {{ hostvars[groups['tag_app_database'][1]]['private_ip_address'] }},"
 
 
     - name: copy demoapp.service to server
