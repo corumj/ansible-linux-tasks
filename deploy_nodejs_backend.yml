@@ -19,7 +19,7 @@
 
     - name: debug this variable 
       debug:
-        var: "{{ hostvars[groups['tag_app_database']] }}"
+        var: "{{ hostvars[groups['tag_app_database'][0]] }}"
 
     - name: update db.config.js with db connection info 
       lineinfile:
