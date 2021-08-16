@@ -1,5 +1,5 @@
 - name: Deploy demo Node JS backend
-  hosts: tag_demo_backend 
+  hosts: all 
   gather_facts: no 
   vars:
     git_repo_url: https://github.com/corumj/node-js-postgresql-crud-example
