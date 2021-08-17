@@ -5,7 +5,7 @@
       - name: testdb
     postgresql_users:
       - name: example_user
-        password: "{{ ansible_password }}"
+        password: example_pass
     postgresql_service_state: started
     postgresql_service_enabled: true
     postgresql_hba_entries:
