@@ -27,13 +27,13 @@
       lineinfile:
         path: "{{ repo_path }}/app/config/db.config.js"
         regexp: '  HOST: "localhost",'
-        line: "  HOST: '{{ hostvars[groups['tag_app_database'][0]]['private_ip_address'] }}'',"
+        line: "  HOST: '{{ hostvars[groups['tag_app_database'][0]]['private_ip_address'] }}',"
 
     - name: update db.config.js with db secret info 
       lineinfile:
         path: "{{ repo_path }}/app/config/db.config.js"
         regexp: '  USER: "postgres",'
-        line: "  USER: '{{ db_pass }}'',"
+        line: "  USER: '{{ db_pass }}',"
 
     - name: copy demoapp.service to server
       become: yes
