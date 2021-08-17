@@ -4,7 +4,7 @@
     git_repo_url: https://github.com/corumj/node-js-postgresql-crud-example
     repo_path: /home/ec2-user/demoapp 
     repo_branch: master
-    db_pass: "{{ ansible_password }}"
+    db_pass: "{{ survey_db_pass }}"
 
   tasks:
     - name: Clone the app repository 
