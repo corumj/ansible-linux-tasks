@@ -4,7 +4,7 @@
     postgresql_databases:
       - name: testdb
     postgresql_users:
-      - name: postgres
+      - name: example_user
         password: "{{ ansible_password }}"
     postgresql_service_state: started
     postgresql_service_enabled: true
