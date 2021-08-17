@@ -6,6 +6,10 @@
     postgresql_users:
       - name: postgres
         password: "{{ ansible_password }}"
+    postgresql_service_state: started
+    postgresql_service_enabled: true
+    postgresql_hba_entries:
+      - { type: host, database: all, user: all, address: '10.0.0.0/16', auth_method: md5 }
   become: yes
   
   roles:
