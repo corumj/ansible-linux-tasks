@@ -1,5 +1,5 @@
 - name: Setup PostgreSQL 
-  hosts: tag_postgres
+  hosts: all
   vars:
     postgresql_databases:
       - name: testdb
