@@ -25,11 +25,17 @@
         regexp: '  HOST: "localhost",'
         line: "  HOST: '{{ hostvars[groups['tag_app_database'][0]]['private_ip_address'] }}',"
 
-    - name: update db.config.js with db secret info 
+    - name: update db.config.js with db user info 
       lineinfile:
         path: "{{ repo_path }}/app/config/db.config.js"
         regexp: '  USER: "postgres",'
-        line: "  USER: '{{ db_pass }}',"
+        line: "  USER: 'app_user',"
+
+    - name: update db.config.js with db secret info 
+      lineinfile:
+        path: "{{ repo_path }}/app/config/db.config.js"
+        regexp: '  PASSWORD: "123",'
+        line: "  PASSWORD: 'app_pass',"
 
     - name: copy demoapp.service to server
       become: yes
