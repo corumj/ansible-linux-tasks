@@ -1,0 +1,28 @@
+- name: Deploy demo Node JS backend
+  hosts: all 
+  collections:
+    - containers.podman
+
+  vars:
+    db_pass: "{{ survey_db_pass }}"
+    goaddr_image: "quay.io/deversmann/goaddr"
+
+  tasks:
+    - name: print ip address 
+      debug:
+        msg: "{{ hostvars[groups['tag_app_database'][0]]['ansible_host'] }}"
+  # - name: Pull latest goaddr image
+  #   podman_image:
+  #     name: "{{ goaddr_image }}"
+
+  # - name: Start GoAddr
+  #   podman_container:
+  #     name: goaddr 
+  #     image: "{{ goaddr_image }}"
+  #     state: started
+  #     ports:
+  #       - "8081:8081"
+  #     env:
+  #       GOADDR_DBDIALECT: postgresql
+  #       GOADDR_DBDSN: "host={{ hostvars[groups['tag_app_database'][0]]['ansible_host'] }} user=app_user password=app_pass dbname=testdb"
+  #       GOADDR_PORT: "8081"
