@@ -7,6 +7,11 @@
     goaddr_image: "quay.io/deversmann/goaddr"
 
   tasks:
+    - name: Ensure podman is installed 
+      package:
+        name: podman
+        state: present 
+        
     - name: Pull latest goaddr image
       podman_image:
         name: "{{ goaddr_image }}"
