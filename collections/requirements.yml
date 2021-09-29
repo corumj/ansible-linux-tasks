@@ -3,4 +3,5 @@ collections:
   - community.aws
   - redhat.rhel_system_roles
   - awx.awx
+  - containers.podman
   
