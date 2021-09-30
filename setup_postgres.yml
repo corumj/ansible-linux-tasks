@@ -11,6 +11,9 @@
     postgres_users_no_log: false
     postgresql_service_state: started
     postgresql_service_enabled: true
+    postgresql_global_config_options:
+      - option: listen_addresses
+        value: "*"
     postgresql_hba_entries:
       - { type: local, database: all, user: postgres, auth_method: peer }
       - { type: local, database: all, user: all, auth_method: peer }
