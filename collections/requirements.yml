@@ -1,7 +1,9 @@
 ---
 collections:
-  - community.aws
-  - redhat.rhel_system_roles
+  - name: amazon.aws
+    version: 3.0.0
+  - name: redhat.rhel_system_roles
+    version: 1.7.3
   - awx.awx
   - containers.podman
   
