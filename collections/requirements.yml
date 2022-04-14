@@ -4,6 +4,8 @@ collections:
     version: 3.0.0
   - name: redhat.rhel_system_roles
     version: 1.7.3
-  - awx.awx
-  - containers.podman
+  - name: ansible.controller 
+    version: 4.1.1
+  - name: containers.podman 
+    version: 1.9.3
   
