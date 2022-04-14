@@ -1,7 +1,7 @@
 ---
-- geerlingguy.haproxy
-- geerlingguy.firewall
-- geerlingguy.apache
-- geerlingguy.postgresql
-- geerlingguy.nodejs
-- geerlingguy.git
+# - geerlingguy.haproxy
+# - geerlingguy.firewall
+# - geerlingguy.apache
+# - geerlingguy.postgresql
+# - geerlingguy.nodejs
+# - geerlingguy.git
