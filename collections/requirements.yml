@@ -8,4 +8,6 @@ collections:
     version: 4.1.1
   - name: containers.podman 
     version: 1.9.3
+  - name: community.general
+    version: 4.7.0
   

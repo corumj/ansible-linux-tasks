@@ -2,6 +2,8 @@
 - name: Use TimeSync RHEL System Role 
   hosts: all 
   become: yes
+  collections:
+    - community.general
   vars:
     timesync_ntp_servers:
       - hostname: 2.rhel.pool.ntp.org
