@@ -1,0 +1,6 @@
+---
+- name: Gather facts for fact storage
+  hosts: all 
+  tasks:
+    - name: Setup Module
+      setup:
