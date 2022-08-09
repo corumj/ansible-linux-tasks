@@ -4,10 +4,6 @@
   tasks:
     - name: Setup Module
       setup:
-        filter:
-          - 'ansible_distribution'
-          - 'ansible_machine_id'
-          - 'ansible_*_mb'
       register: linux_facts 
       when: ansible_os_family == "RedHat"
 
