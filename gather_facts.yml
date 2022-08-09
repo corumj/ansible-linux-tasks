@@ -4,3 +4,19 @@
   tasks:
     - name: Setup Module
       setup:
+        filter:
+          - 'ansible_distribution'
+          - 'ansible_machine_id'
+          - 'ansible_*_mb'
+      register: linux_facts 
+      when: ansible_os_family == "RedHat"
+
+    # - name: Gather Junos Facts 
+    #   junipernetworks.junos.junos_facts:
+    #   register: junos_facts 
+
+    - name: Print facts 
+      debug: 
+        var: linux_facts 
+
+    
